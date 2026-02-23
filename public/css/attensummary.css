@@ -1,0 +1,52 @@
+.filter-card {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+/* Make form horizontal and spaced */
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+}
+
+/* Inputs */
+.input-group input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Button group */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn-search {
+    padding: 9px 18px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    padding: 9px 18px;
+    background: #777;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
