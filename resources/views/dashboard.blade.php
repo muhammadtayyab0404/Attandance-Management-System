@@ -25,6 +25,11 @@
                 @elseif(($exists && $exists->mark == 0))
                 Leave
 
+                @elseif($isSunday)
+                <div class="card" style="margin-top:20px; text-align:center;">
+                <h3 style="color:red;">No Attendance on Sunday 🚫</h3>
+                </div>
+
                 @else
                 Not Marked ❌
         
@@ -34,7 +39,7 @@
         </div>
     </div>
 
-    @if (!$exists)
+    @if (!$exists && !$isSunday)
         
     <div class="card" style="margin-top:20px;">
        

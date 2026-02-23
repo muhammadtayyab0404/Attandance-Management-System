@@ -19,15 +19,17 @@ class Attendance extends Controller
 
 public function dashboardstats(){
     $userid = auth()->id();
+    $today= Carbon::today();
     $todaydate = date('Y-m-d');
     $displaydate= date('l, d F Y');
 
+    $isSunday = $today->isSunday();
 
     $exists = Attendence::where('prof_id', $userid)
     ->where('date', $todaydate)
     ->first();
 
-    return view('dashboard', compact('exists' ,'todaydate','displaydate'));
+    return view('dashboard', compact('exists' ,'todaydate','displaydate','isSunday'));
 }
 
    public function newattendance(Request $request){
@@ -77,68 +79,74 @@ public function dashboardstats(){
 
    public function studentstats(){
 
-   $userid= auth()->id();
+   $userid = auth()->id();
+
    $alldata = Attendence::where('prof_id',$userid)
    ->get(['id','date','mark'])
    ->keyBy('date');
 
    $startdate = Carbon::create(2026,2,1);
 
- $lastAttendanceDate = $alldata->max('date'); // max date from DB
-$enddate = $lastAttendanceDate ? Carbon::parse($lastAttendanceDate) : Carbon::today();
+   $lastAttendanceDate = $alldata->max('date');
+   $enddate = $lastAttendanceDate ? Carbon::parse($lastAttendanceDate) : Carbon::today();
 
-
-   $period =CarbonPeriod::create($startdate,$enddate);
-   $totalclasses = count($period);
+   $period = CarbonPeriod::create($startdate,$enddate);
 
    $attendance = [];
-   $present=0;
-   $absent=0;
-   $leave=0;
+   $present = 0;
+   $absent = 0;
+   $leave = 0;
+   $totalclasses = 0; 
 
+   foreach ($period as $date) {
 
-   foreach ($period as  $date) {
+        
+        if ($date->isSunday()) {
+            continue;
+        }
 
-   
+        $totalclasses++;
+
         $formattedDate = $date->format('Y-m-d');
-       
-  
+
         if(isset($alldata[$formattedDate]) && $alldata[$formattedDate]->mark == 1){
-            $status ='Present';
+            $status = 'Present';
             $present++;
             $rowid = $alldata[$formattedDate]->id;
 
-        }elseif (isset($alldata[$formattedDate]) && $alldata[$formattedDate]->mark ==0){
-            $status ='Leave';
+        }elseif (isset($alldata[$formattedDate]) && $alldata[$formattedDate]->mark == 0){
+            $status = 'Leave';
             $leave++;
             $rowid = $alldata[$formattedDate]->id;
         }
-        
         else{
-            $status ='Absent';
+            $status = 'Absent';
             $absent++;
             $rowid = null;
         }
 
-    $attendance [] =[
-        'date' =>$formattedDate,
-        'status' => $status,
-        'id' => $rowid,
-    ];
+        $attendance[] = [
+            'date' => $formattedDate,
+            'status' => $status,
+            'id' => $rowid,
+        ];
    }
-   $percentage= ($present / $totalclasses) * 100;
-    
+
+   
+   $percentage = $totalclasses > 0 ? ($present / $totalclasses) * 100 : 0;
+
    $attendance = collect($attendance)->reverse()->values();
+   $percent = intval($percentage);
 
-   
-   $percent=intval($percentage);
-
-  
- 
-   
-    return view('student.record' ,  ['alldata' =>$attendance , 'totalattendance' => $totalclasses,'present' =>$present, 'absent'=>$absent, 'percent' =>$percent,'leave' =>$leave]);
-   }
-
+   return view('student.record', [
+        'alldata' => $attendance,
+        'totalattendance' => $totalclasses,
+        'present' => $present,
+        'absent' => $absent,
+        'percent' => $percent,
+        'leave' => $leave
+   ]);
+}
    public function showleave(){
 
    $todaydate = Carbon::today()->format('Y-m-d');

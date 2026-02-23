@@ -54,6 +54,10 @@ $enddate = $lastAttendanceDate ? Carbon::parse($lastAttendanceDate) : Carbon::to
 
    foreach ($period as  $date) {
         $formattedDate = $date->format('Y-m-d');
+
+          if ($date->isSunday()) {
+            continue;
+        }
        
   
         if(isset($alldata[$formattedDate]) && $alldata[$formattedDate]->mark == 1){
@@ -252,6 +256,10 @@ public function attenSummary()
 
         foreach ($period as $date) {
 
+          if ($date->isSunday()) {
+            continue;
+        }
+
             $formattedDate = $date->format('Y-m-d');
 
             if (isset($userRecords[$formattedDate]) && $userRecords[$formattedDate]->mark == 1) {
@@ -315,6 +323,8 @@ public function attenSummary()
 
 
     foreach ($records as $userId => $userRecords) {
+        
+    
 
         $userRecords = $userRecords->keyBy('date');
         $username = $userRecords->first()->users->name;
@@ -322,6 +332,10 @@ public function attenSummary()
         $period = CarbonPeriod::create($startdate, $enddate);
 
         foreach ($period as $date) {
+
+          if ($date->isSunday()) {
+            continue;
+        }
 
             $formattedDate = $date->format('Y-m-d');
 
