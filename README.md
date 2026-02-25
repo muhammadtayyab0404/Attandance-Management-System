@@ -61,19 +61,19 @@ Automatic WhatsApp messages are triggered when:
 
 <img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/b6ddf955-eedd-4543-ab6e-1c09ad29c41d" />
 
-<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/051dae5a-ea04-4445-8770-2eb9b58f38bf" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/051dae5a-ea04-4445-8770-2eb9b58f38bf" />
 
-<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/30d1c4be-3288-45cf-b5f2-e442b5cf6646" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/30d1c4be-3288-45cf-b5f2-e442b5cf6646" />
 
 ## Admin Portal
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/2de4a927-73ff-4e99-b81c-a9d89ae621f6" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/2de4a927-73ff-4e99-b81c-a9d89ae621f6" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/8980c422-b511-47d9-b19f-a3c2ca485288" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/8980c422-b511-47d9-b19f-a3c2ca485288" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/e169a101-3c84-4753-8629-431e5aea0883" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/e169a101-3c84-4753-8629-431e5aea0883" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/02445489-ded4-47aa-a65d-adcfe1f14564" />
+<img width="500" height="800" alt="Image" src="https://github.com/user-attachments/assets/02445489-ded4-47aa-a65d-adcfe1f14564" />
 
 ---
 
