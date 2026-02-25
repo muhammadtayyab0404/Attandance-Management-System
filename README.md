@@ -57,13 +57,13 @@ Automatic WhatsApp messages are triggered when:
 
 ## Student Portal
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/095713ac-24e6-4435-839a-52e2870df834" />
+<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/095713ac-24e6-4435-839a-52e2870df834" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/b6ddf955-eedd-4543-ab6e-1c09ad29c41d" />
+<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/b6ddf955-eedd-4543-ab6e-1c09ad29c41d" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/051dae5a-ea04-4445-8770-2eb9b58f38bf" />
+<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/051dae5a-ea04-4445-8770-2eb9b58f38bf" />
 
-<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/30d1c4be-3288-45cf-b5f2-e442b5cf6646" />
+<img width="800" height="800" alt="Image" src="https://github.com/user-attachments/assets/30d1c4be-3288-45cf-b5f2-e442b5cf6646" />
 
 ## Admin Portal
 
