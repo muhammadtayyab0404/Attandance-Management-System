@@ -1,60 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📅 Attendance Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-featured **Role-Based Attendance Management System** built with Laravel.  
+This system allows students to mark attendance, request leave, complete assigned tasks, and track performance, while administrators manage users, approve leaves, assign tasks, generate reports, and monitor overall attendance statistics.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 👤 User Panel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🔐 User Registration & Login
+- 📅 Mark Attendance (Once Per Day)
+- 📨 Submit Leave Request
+- 📊 View Attendance Records & Percentage
+- 📝 View & Submit Assigned Tasks
+- 📎 Upload Task Documents
+- 🖼 Upload / Update Profile Picture
+- 🔔 Receive WhatsApp Notifications
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+### 🛠 Admin Panel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- 🔐 Secure Admin Login
+- 👥 Manage Registered Users
+- 📅 Edit / Delete Attendance Records
+- 📨 Approve / Reject Leave Requests
+- 📝 Assign Tasks using Rich Text Editor (CKEditor)
+- ✅ Approve / Reject Task Submissions with Feedback
+- 📊 Generate Attendance Reports (Per Student & System-wide)
+- 🎓 Automatic Grade Assignment Based on Attendance
+- 🔑 Role & Permission Management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📲 WhatsApp Notification Integration
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Automatic WhatsApp messages are triggered when:
 
-### Premium Partners
+- Attendance is marked
+- Leave request is submitted
+- Task is assigned
+- Task is approved or rejected
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🧠 System Highlights
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Sunday excluded from attendance calculation
+- One attendance entry per student per day
+- Leave approval updates attendance automatically
+- Dynamic attendance percentage calculation
+- Automated grading system
+- Role-based access control
+- Clean and structured Admin Dashboard
 
-## Code of Conduct
+### Screenshot
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Student Portal
 
-## Security Vulnerabilities
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/095713ac-24e6-4435-839a-52e2870df834" />
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/b6ddf955-eedd-4543-ab6e-1c09ad29c41d" />
 
-## License
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/051dae5a-ea04-4445-8770-2eb9b58f38bf" />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Attandance-Management-System
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/30d1c4be-3288-45cf-b5f2-e442b5cf6646" />
+
+## Admin Portal
+
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/2de4a927-73ff-4e99-b81c-a9d89ae621f6" />
+
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/8980c422-b511-47d9-b19f-a3c2ca485288" />
+
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/e169a101-3c84-4753-8629-431e5aea0883" />
+
+<img width="1911" height="1007" alt="Image" src="https://github.com/user-attachments/assets/02445489-ded4-47aa-a65d-adcfe1f14564" />
+
+---
+
+## 🛠 Tech Stack
+
+- **Backend:** Laravel
+- **Frontend:** Blade Templates, CSS
+- **Database:** MySQL
+- **Authentication:** Laravel Auth
+- **Editor:** CKEditor
+- **Notifications:** WhatsApp Cloud API
+- **Date Handling:** Carbon
+
+---
+
